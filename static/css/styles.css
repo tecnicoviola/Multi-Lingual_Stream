@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f5; /* Soft light background color */
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px; /* Slightly narrower container for a more iOS-like feel */
+    margin: 0 auto;
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for an elevated feel */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+header p {
+    font-size: 16px;
+    color: #777; /* Softer text color */
+}
+
+.upload-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded input fields */
+    background-color: #fafafa; /* Light gray background for inputs */
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #4C9BFF; /* Light blue border on focus */
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007AFF; /* iOS blue color */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #0051B3; /* Darker blue on hover */
+}
+
+.result {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.result h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.result p {
+    font-size: 16px;
+    color: #777; /* Softer text for the result */
+}
+
+video, audio {
+    max-width: 100%;
+    border-radius: 12px; /* Rounded corners for media players */
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow around video/audio */
+}
+
+.result a button {
+    padding: 12px 25px;
+    background-color: #007AFF; /* iOS blue color for buttons */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.result a button:hover {
+    background-color: #0051B3; /* Darker blue on hover */
+}
