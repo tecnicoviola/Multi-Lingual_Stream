@@ -1,64 +1,62 @@
+ Speech-to-Speech Streaming in Multilingual Contexts
+Description:
+This repository contains the implementation and documentation of our internship project at Infosys Springboard. The project focuses on building a multilingual speech-to-speech streaming system. It leverages modern NLP and AI techniques to process, translate, and re-integrate speech in different languages seamlessly.
 
-# Retrieval Augmented Generation (RAG)
+Project Overview
+Key Objectives:
+Process multimedia content and extract speech components.
+Translate extracted speech into multiple languages.
+Reintegrate the translated speech back into the original video.
+Learning Milestones:
+Project Foundations:
 
-Retrieval-Augmented Generation (RAG) is an AI framework that improves the output of large language models (LLMs) by combining them with traditional information retrieval systems
+In-depth exploration of key concepts like ingestion, retrieval, basic agent functionality, and agent memory.
+Hands-on learning with tools and frameworks to set the foundation for the project.
+Implementation Steps:
 
-## References
+Speech Extraction:
+Extracted audio from video files and converted it to MP3 format.
+Utilized tools to isolate speech from MP3 files.
+Speech-to-Text Conversion:
+Used pre-trained models (e.g., Hugging Face Transformers) for high-accuracy speech-to-text processing.
+Multilingual Translation:
+Applied translation models to convert text to the desired target languages.
+Text-to-Speech Generation:
+Generated speech in the target language using state-of-the-art text-to-speech (TTS) models.
+Video Integration:
+Synchronized the translated speech back into the original video to produce a seamless multilingual output.
+Advanced Learnings:
+LangGraph:
 
-[RAG Documentation](https://python.langchain.com/docs/tutorials/rag/)
+Explored and implemented graph-based NLP workflows for processing complex language transformations.
+Created a mini-project using LangGraph to understand its capabilities better.
+AI Models Used:
 
-[Pinecone](https://www.pinecone.io/)
+Hugging Face models for natural language understanding and generation.
+TTS models and libraries for high-quality speech generation.
+Additional tools and APIs for audio and video processing.
+Mini-Project: LangGraph-based Speech Workflow
+Developed a mini-project using LangGraph to visualize and execute a speech-to-speech translation pipeline. This helped us understand graph-based workflows for complex AI tasks.
 
-[Huggingface](https://huggingface.co/)
+Technologies & Tools
+Python
+Hugging Face Transformers
+LangGraph
+Text-to-Speech Libraries (e.g., gTTS, Google Cloud TTS)
+Video Processing Libraries (e.g., FFmpeg)
+APIs for multilingual translation (Google Translate API, DeepL, etc.
 
-[Google Gemini API](https://ai.google.dev/)
+How to Use
+Clone the repository:
+git clone https://github.com/your-username/speech-to-speech-streaming.git
+cd speech-to-speech-streaming
 
+Install dependencies:
+pip install -r requirements.txt
 
-
-
-
-
-## Installation
-
-Install my-project with npm
-
-```bash
-  pipenv shell
-```
-
-Installing Langchain, Langchain Core, Langchain Google GenAI etc
-    
-```bash
-  pipenv install langchain_google_genai langchain langchain_core langchain_huggingface langchain_pinecone langchain_community langchain_text_splitters
-```
-
-Installing dotenv package for storing API keys, and other important credentials
-
-```bash
-  pip install python-dotenv
-```
-
-After installing this package create .env file and add below GOOGLE API KEY from https://ai.google.dev/
-
-```bash
-  GOOGLE_API_KEY=AIzaSyDfJIcDSXgRZvW3GdFzCIo1iPBXHXULh8Q
-```
-
-Visit Pinecone website to create new index &
-get your pinecone api key and add that inside the .env file
-
-```bash
-  PINECONE_API_KEY=AIzaSyDfJIcDSXgRZvW3GdFzCIo1iPBXHXULh8Q
-```
-
-Replace your pincone key with above dummy key.
-
-
-## Project Info
-
-This project is divided into 2 parts
-
-    1. Ingestion
-    2. Retrieve
-
-
+Run the scripts in sequence:
+python scripts/extract_audio.py
+python scripts/speech_to_text.py
+python scripts/translate.py
+python scripts/text_to_speech.py
+python scripts/integrate_video.py
