@@ -1,88 +1,78 @@
-# Speech-to-Speech Streaming in Multilingual Contexts
-## Description:
-This repository contains the implementation and documentation of our internship project at Infosys Springboard. The project focuses on building a multilingual speech-to-speech streaming system. It leverages modern NLP and AI techniques to process, translate, and re-integrate speech in different languages seamlessly.
+# MultiStream: Speech-to-Speech Streaming Platform
+## **Description**:
+This repository implements a web application that enables real-time, multilingual communication through video content. It leverages cutting-edge Natural Language Processing (NLP) and Artificial Intelligence (AI) techniques to seamlessly process, translate, and integrate speech across different languages within video files.
 
-## Project Overview:
-### Key Objectives:
-1.Process multimedia content and extract speech components.
+### **How it Works:**
+1. **Upload an MP4 video and choose a target language.**
+2. **The application extracts audio, converts it to text, translates it, and generates synthetic speech in your chosen language.**
+3. **Audio speed is adjusted to match the video, and the translated audio is seamlessly integrated into a new video.**
+4. **Download your translated video!**
 
-2.Translate extracted speech into multiple languages.
+### **Technology Stack:**
+*   **Backend Framework:** Flask (Python web framework)
+*   **Speech-to-Text:** Whisper (Automatic Speech Recognition model)
+*   **Multilingual Translation:** Google Generative AI (AI for text translation)
+*   **Text-to-Speech:** gTTS (Python library for text-to-speech generation)
+*   **Video Processing:** MoviePy (Python library for video editing)
+*   **Audio Processing:** pydub (Python library for audio manipulation)
+---
+### **Getting Started:**
 
-3.Reintegrate the translated speech back into the original video.
+1.  **Clone the Repository:**
 
-### Learning Milestones:
-###   1.Project Foundations:
+    ```bash
+    git clone https://your-username/speech-to-speech-streaming.git
+    ```
 
-1.In-depth exploration of key concepts like ingestion, retrieval, basic agent functionality, and agent memory.
+2.  **Install Dependencies:**
 
-2.Hands-on learning with tools and frameworks to set the foundation for the project.
+    ```bash
+    cd speech-to-speech-streaming
+    pip install -r requirements.txt
+    ```
 
-### 2.Implementation Steps:
+3.  **Set up Environment Variables:**
 
-### Speech Extraction:
-1.Extracted audio from video files and converted it to MP3 format.
+    *   Create a `.env` file in the project root directory.
+    *   Add the line `GOOGLE_API_KEY=<your_google_api_key>` within the `.env` file, replacing `<your_google_api_key>` with your actual Google Cloud API Key.
 
-2.Utilized tools to isolate speech from MP3 files.
+4.  **Run the Application:**
 
-### 3.Speech-to-Text Conversion:
-1.Used pre-trained models (e.g., Hugging Face Transformers) for high-accuracy speech-to-text processing.
+    ```bash
+    python app.py
+    ```
 
-### 4.Multilingual Translation:
-Applied translation models to convert text to the desired target languages.
+    This will start the web application, typically accessible at `http://127.0.0.1:5000/` in your web browser.
+---
+### **Usage/Screenshots:**
 
-### 5.Text-to-Speech Generation:
-Generated speech in the target language using state-of-the-art text-to-speech (TTS) models.
-
-### 6.Video Integration:
-Synchronized the translated speech back into the original video to produce a seamless multilingual output.
-
-
-## Advanced Learnings:
-
-### LangGraph:
-Explored and implemented graph-based NLP workflows for processing complex language transformations.
-
-Created a mini-project using LangGraph to understand its capabilities better.
-
-### AI Models Used:
-1.Hugging Face models for natural language understanding and generation.
-
-2.TTS models and libraries for high-quality speech generation.
-
-3.Additional tools and APIs for audio and video processing.
-
-4.Mini-Project on LangGraph-based Speech Workflow
-
-5.Developed a mini-project using LangGraph to visualize and execute a speech-to-speech translation pipeline. This helped us understand graph-based workflows for complex AI tasks.
-
-## Technologies & Tools
-
-Python
-
-Hugging Face Transformers
-
-LangGraph
-
-Text-to-Speech Libraries (e.g., gTTS, Google Cloud TTS)
-
-Video Processing Libraries (e.g., FFmpeg)
-
-APIs for multilingual translation (Google Translate API, DeepL, etc.
+#### 1.  Choose a file & upload your video:
+![image](https://github.com/user-attachments/assets/b7ac0cbb-96af-4792-b7ce-7e8026890584)
 
 
-## How to Use
+#### 2.  Select your target language:
+![image](https://github.com/user-attachments/assets/52fc7da5-1b1b-4428-b468-df4cb95ea1be)
 
-### Clone the repository:
-git clone https://github.com/your-username/speech-to-speech-streaming.git
+#### 3.  Processing : The application processes the video, does translation, and video integration.
+![image](https://github.com/user-attachments/assets/cdebca49-71ae-4dd5-ac48-9d295b47bfe1)
 
-cd speech-to-speech-streaming
+#### 4.  View the translated video: A download link will be provided upon completion.
+![image](https://github.com/user-attachments/assets/d15d8f5c-68aa-4c98-8ad3-95b33c70fd7c)
 
-### Install dependencies:
-pip install -r requirements.txt
+---
+## **Future Improvements:**
 
-### Run the scripts in sequence:
-python scripts/extract_audio.py
-python scripts/speech_to_text.py
-python scripts/translate.py
-python scripts/text_to_speech.py
-python scripts/integrate_video.py
+*   **Real-Time Processing:** Implement real-time speech-to-speech streaming.
+*   **Improved TTS Models:** Integrate advanced neural TTS models for more natural speech synthesis.
+*   **Dynamic Language Support:** Add more languages and dialects for translation.
+*   **Optimized Video Integration:** Enhance the synchronization process to handle more complex videos.
+*   **Interactive UI:** Develop a web-based interface for user-friendly interaction.
+
+## **Acknowledgments:**
+
+*   **Open Source Communities:** For the tools and libraries that made this project possible.
+
+## **Additional Notes:**
+
+*   The current implementation supports MP4 video files for processing.
+*   The maximum file size for upload is limited to 50MB.
